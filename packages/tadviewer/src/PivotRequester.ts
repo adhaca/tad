@@ -145,6 +145,8 @@ const requestQueryView = async (
   const schemaCols = baseSchema.columns;
   const aggMap: any = {};
 
+  debugger;
+
   for (let cid of schemaCols) {
     aggMap[cid] = viewParams.getAggFn(baseSchema, cid);
   }

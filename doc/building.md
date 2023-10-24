@@ -26,14 +26,27 @@ This runs the standard lerna `bootstrap` command with a few extra arguments need
 
 After bootstrapping, run the following script to try and build everything, including the web app (tadweb-app), reference web server (tadweb-server), and desktop app:
 
-    $ ./tools/build-all.sh
+    $ node tools/buildAll.js
 
 ## Trying the Desktop app
 
     $ cd packages/tad-app
-    $ npm start -- csv/movie_metadata.csv
+    $ npm start
 
-If all went well, the Tad app should start with a view of `csv/movie_metadata.csv`
+If all went well, the Tad app should start
+
+## For Debugging
+
+Since tad-app is build in development mode, a 'Debug'  option is added to top menu which allows you to enable Developer Tools
+
+Each package has a watch script to allow auto rebuilding after code changes:
+    - Note1: You need a separate console/powershell window for each watch
+    - Note2: You still need to rerun npm start for tad-app after each auto rebuild
+    
+    $ cd packages/[any-package]
+    $ npm watch
+
+## OPTIONAL
 
 ## Trying the experimental web app
 

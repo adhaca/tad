@@ -7,7 +7,8 @@
   "scripts": {
     "prepublish": "npm run build",
     "clean": "rimraf dist",
-    "build": "tsc -p tsconfig-build.json",
+    "build": "tsc tsconfig-build.json",
+    "watch": "tsc tsconfig-build.json --watch",
     "test": "AWS_PROFILE=dev ./scripts/run-tests-locally.sh",
     "test:run": "jest --config jest.config.json --no-cache"
   },

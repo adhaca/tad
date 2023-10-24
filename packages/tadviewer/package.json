@@ -12,7 +12,7 @@
     "build-assets": "npm run build:dir && npm run build:html",
     "build-dev": "npm run build-assets && webpack --mode development",
     "build-prod": "npm run build-assets && webpack --env prod --mode production",
-    "build": "npm run build-prod",
+    "build": "npm run build-dev",
     "tsc": "tsc",
     "watch": "webpack --mode development --watch",
     "watch-prod": "webpack --env prod --mode production --watch"

@@ -6,7 +6,7 @@
   "scripts": {
     "clean": "rimraf dist",
     "build:dir": "mkdirp dist",
-    "build:html": "cp -r html/* dist",
+    "build:html": "recursive-copy -w html dist",
     "build-assets": "npm run build:dir && npm run build:html",
     "build-dev": "npm run build-assets && webpack --mode development",
     "build-prod": "npm run build-assets && webpack --env prod --mode production",
